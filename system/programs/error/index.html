@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Win95 Error Dialog</title>
+		<link rel="stylesheet" type="text/css" href="/system/layout/controls.css">
+		<link rel="stylesheet" type="text/css" href="error.css">
+                <script src="/system/libraries/jquery.js"></script>
+                <!--<script src="/system/libraries/win95.js"></script>-->
+                <script src="/system/libraries/program.js"></script>
+                <script src="error.js"></script>
+	</head>
+	<body>
+		<div id="widget_cont">
+		<!-- start widget html -->
+			<div class="win_wid_error_tgt"></div>
+			<div class="win_wid_error_container">
+				<div class="win_wid_error_concont">
+					<div class="win_wid_error_icondiv">
+						<img src="/system/icons/error.png" class="win_wid_error_icon">
+					</div>
+					<p class="win_wid_error_text">
+						Cannot find the file '<span id="win_wid_error_path"></span>' (or one of its components). Make sure the path and filename are correct and that all required libraries are available.
+					</p>
+				</div>
+				<p class="win_wid_error_buttoncont">
+					<button class="win_wid_error_close">OK</button>
+				</p>
+			</div>
+		<!-- end widget html -->			
+		</div>
+	</body>
+</html>
