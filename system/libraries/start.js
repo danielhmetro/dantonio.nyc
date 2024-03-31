@@ -37,13 +37,14 @@ $(document).ready(function() {
 		data.forEach(function(item) {
 			programsMenu.append("<div onclick='menuProgram(this)'>" + item.name +  "</div>");
 		});
-		programsMenu.css({ left: 170, top: 578.5 });
 	});
 
 	// HOVER PROGRAMS
 	var hoverTimeout;
 
 	programsButton.mouseenter(function() {
+                programsMenu.css({ left: 170, top: programsButton.offset().top });
+
 		// Clear any existing timeout to avoid multiple div creations
 		clearTimeout(hoverTimeout);
 
