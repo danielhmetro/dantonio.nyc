@@ -1,7 +1,8 @@
 /* WELCOME DIALOG */
 
 h1 {
-	line-height: 15px;
+	/* line-height: 15px; */
+	line-height: 30px;
 }
 h4 {
     padding-left: 1em;
@@ -86,9 +87,19 @@ body {
     transform: translate(-50%, 0);
 }
 #welcome_buttons {
-    float:left;
+    float: left;
     width: 75px;
     padding-left: 13px;
+    padding-top: 10px;
+}
+@media screen and (max-width: 509px) {
+    #welcome_buttons {
+        text-align: center;
+        clear: both;
+        width: 100%;
+        padding-left: 0;
+        padding-top: 10px;
+    }
 }
 #checkbox_field {
     content: "";

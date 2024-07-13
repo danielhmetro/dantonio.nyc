@@ -89,9 +89,15 @@ $(document).ready(function() {
 
 // LAUNCH PROGRAM FROM MENU
 function menuProgram(clickedElement) {
-	$(clickedElement).parent().removeClass('show');
-	var textContent = $(clickedElement).text();
-	makeWindow(false, textContent, "/programs/" + textContent + "/", true, true, 700, 600);
+    $(clickedElement).parent().removeClass('show');
+    var textContent = $(clickedElement).text();
+    var windowWidth = window.innerWidth;
+    var width = windowWidth < 700 ? windowWidth - 8 : 700;
+    if (textContent == "minesweeper") {
+        makeWindow(false, textContent, "/programs/" + textContent + "/", true, true, 248, 339);
+    } else {
+        makeWindow(false, textContent, "/programs/" + textContent + "/", true, true, width, 600);
+    }
 }
 
 function startClose() {
