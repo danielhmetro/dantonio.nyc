@@ -68,6 +68,7 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+/* Styles for screen widths above 509px */
 #widget_cont {
     background-color: #ffffde;
     border-style: inset;
@@ -76,27 +77,39 @@ body {
     height: 250px;
     float: left;
 }
+/* Styles for screen widths 509px and below */
+@media screen and (max-width: 509px) {
+    #widget_cont {
+        width: 100%;
+        margin-right: 1em;
+    }
+}
+
 #win_welcome_tip {
     margin: 1em 1em;
 }
 .win_welcome_image {
-    height: 125px;
-    text-align: center;
+    width: 90px;
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 5%;
+}
+@media screen and (max-width: 509px) {
+    .win_welcome_image {
+        width: 150px;
+        left: 0;
+        padding-top: 5px;
+    }
 }
 #welcome_buttons {
     float: left;
-    width: 75px;
+    width: 90px;
     padding-left: 13px;
     padding-top: 10px;
 }
 @media screen and (max-width: 509px) {
     #welcome_buttons {
-        text-align: center;
         clear: both;
-        width: 100%;
+        width: 50%;
         padding-left: 0;
         padding-top: 10px;
     }

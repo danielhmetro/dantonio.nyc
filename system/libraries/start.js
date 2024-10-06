@@ -58,6 +58,12 @@ $(document).ready(function() {
 		clearTimeout(hoverTimeout);
 		programsMenu.removeClass('show');
 	});
+        programsDocuments.click(function() {
+                var windowWidth = window.innerWidth;
+                var width = windowWidth < 700 ? windowWidth - 8 : 700;
+		makeWindow(false, "Documents", "/system/programs/documents", true, true, width, 600);
+                startClose();
+        });
 	programsSettings.mouseenter(function() {
                 clearTimeout(hoverTimeout);
                 programsMenu.removeClass('show');
@@ -65,6 +71,13 @@ $(document).ready(function() {
 	programsFind.mouseenter(function() {
                 clearTimeout(hoverTimeout);
                 programsMenu.removeClass('show');
+        });
+	programsFind.click(function() {
+                var windowWidth = window.innerWidth;
+                var width = windowWidth < 700 ? windowWidth - 8 : 700;
+		// makeWindow(false, "Documents", "/system/programs/winver", true, true, width, 600);
+		makeWindow(false, "Contact Daniel", "/system/programs/winver", false, false, 350, 250);
+                startClose();
         });
 	programsHelp.mouseenter(function() {
                 clearTimeout(hoverTimeout);
