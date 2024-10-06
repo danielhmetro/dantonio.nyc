@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'MS Win 95';
+    src: url('/system/layout/fonts/MyFont.ttf') format('ttf'),
+url('/system/layout/fonts/MyFont.woff2') format('woff2'),
+        url('/system/layout/fonts/MyFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #C0C0C0;
+    font-family: Arial, sans-serif;
+}
+
+button {
+	font-family: "MS Win 95";
+    font-size: 10px;
+    box-shadow: -1px -1px 0px 0px white, 1px 0px 0px 0px #808080;
+    border: none;
+    background-color: #C0C0C0;
+    padding: 3px;
+    border-radius: 1px 1px 0 0;
+}
+#pallasButton {
+    padding: 4px;
+    position: relative;
+    z-index: 3;
+    margin-left: 2px;
+}
+#tortoiseButton {
+    margin-left: -4px;
+    position: relative;
+    z-index: 2;
+}
+#porpoiseButton {
+    margin-left: -3px;
+    position: relative;
+    z-index: 1;
+}
+
+.system-monitor {
+    height: 90vh;
+    box-shadow:
+        -1px -1px 0px 0px white,
+        1px 1px 0px 0px #808080;
+}
+
+.box {
+	font-family: "MS Win 95";
+    font-size: 10px;
+    padding: 10px;
+    border: 2px solid #C0C0C0;
+    margin: 15px 15px 5px 15px;
+    float: left;
+    /* Inner border effect */
+    border-top: 2px solid white;      /* Inner top border - white */
+    border-left: 2px solid white;     /* Inner left border - white */
+    border-bottom: 2px solid #808080; /* Inner bottom border - grey */
+    border-right: 2px solid #808080;  /* Inner right border - grey */
+    
+    /* Outer border using box-shadow */
+    box-shadow:
+        -1px -1px 0px 0px #808080,  /* Top-left outer border - grey */
+        1px 1px 0px 0px white;       /* Bottom-right outer border - white */
+
+}
+.box p {
+    margin: 0;
+    position: relative;
+    top: -25px;
+}
+.box span {
+    float: right;
+}
+.box.left {
+    width: 22%;
+    float: left;
+    padding-bottom: 0px;
+}
+.box.lefttext {
+    width: 39%;
+    height: 50px;
+}
+.box.righttext {
+    margin-left: 0;
+    width: 39%;
+    height: 50px;
+}
+
+h3 {
+	font-family: "MS Win 95";
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    position: relative;
+    top: -19px;
+    background-color: #C0C0C0;
+    width: fit-content;
+}
+
+canvas {
+    background-color: #f8f8f8;
+    border: 1px solid #808080;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: -15px;
+}
+
+#cpuUsageContainer {
+    margin-left: 0;
+    width: 56%;
+    padding-bottom: 0px;
+}
+#memoryUsageContainer {
+    margin-left: 0;
+    width: 56%;
+    padding-bottom: 0px;
+}

@@ -61,12 +61,18 @@ $(document).ready(function() {
         programsDocuments.click(function() {
                 var windowWidth = window.innerWidth;
                 var width = windowWidth < 700 ? windowWidth - 8 : 700;
-		makeWindow(false, "Documents", "/system/programs/documents", true, true, width, 600);
+		makeWindow("/system/icons/documents24.png", "Documents", "/system/programs/documents", true, true, width, 600);
                 startClose();
         });
 	programsSettings.mouseenter(function() {
-                clearTimeout(hoverTimeout);
-                programsMenu.removeClass('show');
+		clearTimeout(hoverTimeout);
+		programsMenu.removeClass('show');
+	});
+        programsSettings.click(function() {
+                var windowWidth = window.innerWidth;
+                var width = windowWidth < 700 ? windowWidth - 8 : 700;
+		makeWindow("/system/icons/beizer.png", "Windows Task Manager", "/system/programs/taskmgr", true, true, 445, 600);
+                startClose();
         });
 	programsFind.mouseenter(function() {
                 clearTimeout(hoverTimeout);
