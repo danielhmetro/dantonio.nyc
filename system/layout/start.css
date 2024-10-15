@@ -72,11 +72,15 @@
 }
 .win_start_menu div {
 	font-family: "Microsoft Sans Serif";
-        font-size: 10pt;
+	font-size: 10pt;
 }
 .win_start_menu div:hover {
-        background-color: #000099;
-        color: white;
+	background-color: #000099;
+	color: white;
+}
+.win_start_menu img {
+	height: 10pt;
+	padding-right: 5px;
 }
 .show {
 	opacity: 1; /* Fade in by changing opacity to 1 */

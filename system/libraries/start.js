@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	// LOAD PROGRAMS SUBITEMS
 	var programsButton = $('#win_start_tli_programs')
-	var programsDocuments = $('#win_start_tli_documents')
+	var documentsButton = $('#win_start_tli_documents')
 	var programsSettings = $('#win_start_tli_settings')
 	var programsFind = $('#win_start_tli_find')
 	var programsHelp = $('#win_start_menu_help');
@@ -30,6 +30,7 @@ $(document).ready(function() {
 	var programsShutdown = $('#win_start_tli_shutdown')
 
 	var programsMenu = $('#win_start_menu_programs');
+        var documentsMenu = $('#win_start_menu_documents');
 
 	fetch('/programs')
 	.then(response => response.json())
@@ -43,10 +44,9 @@ $(document).ready(function() {
 	var hoverTimeout;
 
 	programsButton.mouseenter(function() {
-                programsMenu.css({ left: 170, top: programsButton.offset().top });
-
-		// Clear any existing timeout to avoid multiple div creations
 		clearTimeout(hoverTimeout);
+		$(".win_start_menu").removeClass('show');
+                programsMenu.css({ left: 170, top: programsButton.offset().top });
 
 		// Set a new timeout to create the second div after 3 seconds
 		hoverTimeout = setTimeout(function() {
@@ -54,19 +54,33 @@ $(document).ready(function() {
 			programsMenu.addClass('show');
 		},400)
 	});
-	programsDocuments.mouseenter(function() {
-		clearTimeout(hoverTimeout);
-		programsMenu.removeClass('show');
-	});
-        programsDocuments.click(function() {
+        documentsButton.mouseenter(function() {
+                clearTimeout(hoverTimeout);
+		$(".win_start_menu").removeClass('show');
+                documentsMenu.css({ left: 170, top: documentsButton.offset().top });
+                
+		hoverTimeout = setTimeout(function() {
+			documentsMenu.addClass('show');
+		},400)
+                
                 var windowWidth = window.innerWidth;
                 var width = windowWidth < 700 ? windowWidth - 8 : 700;
-		makeWindow("/system/icons/documents24.png", "Documents", "/system/programs/documents", true, true, width, 600);
-                startClose();
+                
+                $('#win_start_menu_documents_documents').click(function() {
+                        makeWindow("/system/icons/documents24.png", "My Documents", "/system/programs/documents", true, true, width, 600);
+                        $(".win_start_menu").removeClass('show');
+                        startClose();
+                });
+                
+                $('#win_start_menu_documents_music').click(function() {
+                        makeWindow("/system/icons/music.png", "My Music", "/system/programs/music", true, true, width, 600);
+                        $(".win_start_menu").removeClass('show');
+                        startClose();
+                });
         });
 	programsSettings.mouseenter(function() {
 		clearTimeout(hoverTimeout);
-		programsMenu.removeClass('show');
+		$(".win_start_menu").removeClass('show');
 	});
         programsSettings.click(function() {
                 var windowWidth = window.innerWidth;
@@ -76,7 +90,7 @@ $(document).ready(function() {
         });
 	programsFind.mouseenter(function() {
                 clearTimeout(hoverTimeout);
-                programsMenu.removeClass('show');
+		$(".win_start_menu").removeClass('show');
         });
 	programsFind.click(function() {
                 var windowWidth = window.innerWidth;
@@ -87,11 +101,11 @@ $(document).ready(function() {
         });
 	programsHelp.mouseenter(function() {
                 clearTimeout(hoverTimeout);
-                programsMenu.removeClass('show');
+		$(".win_start_menu").removeClass('show');
         });
 	programsRun.mouseenter(function() {
                 clearTimeout(hoverTimeout);
-                programsMenu.removeClass('show');
+		$(".win_start_menu").removeClass('show');
         });
 	programsRun.click(function() {
 		windowBottomLeft(makeWindow(false, 'Run', "/system/programs/run", false, false, 340, 158));
@@ -99,7 +113,7 @@ $(document).ready(function() {
         });
 	programsShutdown.mouseenter(function() {
                 clearTimeout(hoverTimeout);
-                programsMenu.removeClass('show');
+		$(".win_start_menu").removeClass('show');
         });
 	programsShutdown.click(function() {
                 location.reload();

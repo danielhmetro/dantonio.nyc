@@ -1,0 +1,40 @@
+* {
+    user-select: none;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+
+.music-container {
+    padding: 0;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+thead tr {
+    background-color: black;
+}
+
+th, td {
+    padding: 4px 8px;
+    text-align: left;
+    font-size: 12px;
+}
+
+th {
+    background-color: #c0c0c0;
+    font-weight: normal;
+    cursor: pointer;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid #808080;
+    border-right: 2px solid #808080;
+}
