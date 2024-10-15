@@ -22,7 +22,6 @@ function formatDateTime(dateString) {
         'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3, 'May': 4, 'Jun': 5,
         'Jul': 6, 'Aug': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11
     };
-
     // Create a new Date object using the parsed parts
     const date = new Date(
         Date.UTC(
@@ -34,7 +33,7 @@ function formatDateTime(dateString) {
             parseInt(second)
         )
     );
-
+    date.setHours(date.getHours() + 4);
     // Format the date to match the desired output
     const options = {
         year: '2-digit',
@@ -44,7 +43,6 @@ function formatDateTime(dateString) {
         minute: '2-digit',
         hour12: true,
     };
-
     return date.toLocaleString('en-US', options).replace(',', '');
 }
 
