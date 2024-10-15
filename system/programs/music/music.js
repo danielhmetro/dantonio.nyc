@@ -1,4 +1,4 @@
-const musicUrl = 'https://dantonio.tech/metrics/music';
+const musicUrl = '/metrics/music';
 let musicData = [];
 let sortDirections = [true, true, true]; // true for ascending, false for descending
 
