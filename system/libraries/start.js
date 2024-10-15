@@ -62,10 +62,10 @@ $(document).ready(function() {
 		hoverTimeout = setTimeout(function() {
 			documentsMenu.addClass('show');
 		},400)
-                
+        });
+        (function() {
                 var windowWidth = window.innerWidth;
                 var width = windowWidth < 700 ? windowWidth - 8 : 700;
-                
                 $('#win_start_menu_documents_documents').click(function() {
                         makeWindow("/system/icons/documents24.png", "My Documents", "/system/programs/documents", true, true, width, 600);
                         $(".win_start_menu").removeClass('show');
@@ -73,11 +73,11 @@ $(document).ready(function() {
                 });
                 
                 $('#win_start_menu_documents_music').click(function() {
-                        makeWindow("/system/icons/music.png", "My Music", "/system/programs/music", true, true, width, 600);
+                        makeWindow("/system/icons/music.png", "My Music", "/system/programs/music", true, true, width, 475);
                         $(".win_start_menu").removeClass('show');
                         startClose();
                 });
-        });
+        })();
 	programsSettings.mouseenter(function() {
 		clearTimeout(hoverTimeout);
 		$(".win_start_menu").removeClass('show');

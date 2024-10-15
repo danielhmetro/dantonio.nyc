@@ -4,8 +4,11 @@ button {
 	border-left: 1px solid white;
 	border-bottom: 2px ridge black;
 	border-right: 2px ridge black;
+	color: black;
 }
-
+button:disabled {
+	color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+}
 button:active {
 	background-color: #c0c0c0;
 	border-top: 2px groove black;

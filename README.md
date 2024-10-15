@@ -8,7 +8,7 @@ For a while I wanted to create a web-based shell for running real programs in th
 
 ### Programs
 Status: done ✅
-The Programs sub-menu in the start menu is populated using custom Apache Indexes and outputing the directory index as JSON. This allows for every program to be easily added with its own "libraries" (html, css, js), or to use the proxy module to transparently serve some other server in the LAN.
+The Programs sub-menu is populated using custom Apache Indexes and outputing the directory index as JSON. This allows for every program to be easily added with its own "libraries" (html, css, js), or to use the proxy module to transparently serve some other server in the LAN.
 
 #### mesh_grafana
 This is a reverse proxy embed of the [NYC Mesh](https://nycmesh.net/) Grafana which shows statistics on a number of different radios and services used to power the Mesh network.
@@ -19,13 +19,15 @@ This is a fork of nickarocho's [Minesweeper](https://github.com/nickarocho/mines
 #### nyckml
 This is a KML generator that allows you to visualize the line-of-sight between two NYC rooftops using Google Earth. Handly for installing antennas in the mesh. You can read up more about its function [here](https://github.com/danielhmetro/nyckml).
 
-#### music
-Status: 💥
-What I want this to be is a viewer of all the last-played songs from my NextCloud playlist (so people can look at what music I have been listening to [I tend not use commercial streaming services anymore]) but it has been quite a pain due to the fact that 1) Subsonic (the music provider backend that the Music [app](https://github.com/owncloud/music/) provides) does not expose this very well (or that I haven't spent time disecting the protocol to get this information) and 2) my planned method to use a PHP backend to use inotify to see when files were being opened using the filesystem has been literally the worst experience ever...ok I am dying just remembering what a disaster that was so yeah it will remain broken until I have a better plan.
-
 ### Documents
 Status: mostly there ☑️
+The Documents sub-menu is hardcoded with programs that simulate Windows Explorer depending on the context. The particular elements in the folder still need a bit of work to be bug free, but the basic functionality is now complete.
+
+#### My Documents
 This where my projects, resume, and other information are. It connects to my NextCloud server using WebDAV with a public share. Ideally, clicking on files would open up some context-aware file viewer as a window inside the "operating system" but for now, it will trigger a file download as a blob.
+
+#### My Music
+This is a viewer of all the last-played songs from my NextCloud playlist (so people can look at what music I have been listening to [I tend not use commercial streaming services anymore]). Originally wanted to intercept requests from the Subsonic backend or use inotify to see when files were being opened using the filesystem, but I now use middleware on the server to access the Nextcloud database directly for the music metadata.
 
 ### Servers
 Status: done ✅
