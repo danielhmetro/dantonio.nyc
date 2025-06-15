@@ -10,9 +10,6 @@ For a while I wanted to create a web-based shell for running real programs in th
 Status: done ✅
 The Programs sub-menu is populated using custom Apache Indexes and outputing the directory index as JSON. This allows for every program to be easily added with its own "libraries" (html, css, js), or to use the proxy module to transparently serve some other server in the LAN.
 
-#### mesh_grafana
-This is a reverse proxy embed of the [NYC Mesh](https://nycmesh.net/) Grafana which shows statistics on a number of different radios and services used to power the Mesh network.
-
 #### minesweeper
 This is a fork of nickarocho's [Minesweeper](https://github.com/nickarocho/minesweeper), modified such that it fits within a window inside the "operating system". Honestly a way better rendition of minesweeper that I could ever do myself and is honestly what makes this website whole.
 
