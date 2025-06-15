@@ -31,7 +31,7 @@ This is a viewer of all the last-played songs from my NextCloud playlist (so peo
 
 ### Servers
 Status: done ✅
-While Windows 95 would have this named as "Settings", there is not a strong need for a Control Panel in my website at the moment. Thus, I built "Windows Task Manager"! It pulls statistics from [Telegraf](https://github.com/influxdata/telegraf) which runs of each of my three servers (Pallas-a Ubiquiti CloudKey Gen2, Tortoise-a Dell Optiplex 640, Porpoise-a HP EliteDesk 800 G1 TWR). Should I have things to control from my website one day, I will move Windows Task Manager to a submenu of this file.
+While Windows 95 would have this named as "Settings", there is not a strong need for a Control Panel in my website at the moment. Thus, I built "Windows Task Manager"! It pulls statistics from [Telegraf](https://github.com/influxdata/telegraf) which runs of each of my three servers (Pallas—a Ubiquiti CloudKey Gen2, Tortoise—an HP ProLiant ML30 Gen9, Porpoise—a HP EliteDesk 800 G1 TWR). Should I have things to control from my website one day, I will move Windows Task Manager to a submenu of this file.
 
 ### Contact
 Status: done(?) ✅
