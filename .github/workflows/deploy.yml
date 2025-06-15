@@ -25,7 +25,6 @@ jobs:
         run: |
           ip addr show wg0
           ip route
-          wg show
           ping -c 4 ${{ secrets.SSH_HOST }}
 
       - name: Connect and git pull
