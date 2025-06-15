@@ -21,10 +21,8 @@ jobs:
           sudo ip link set up dev wg0
           rm privatekey
       
-      - name: Debug WireGuard and Routing
+      - name: Confirm connectivity
         run: |
-          ip addr show wg0
-          ip route
           ping -c 4 ${{ secrets.SSH_HOST }}
 
       - name: Connect and git pull
@@ -35,4 +33,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ${{ secrets.WEBSITE_DIR }}
-            git pull origin main
+            git pull origin master
