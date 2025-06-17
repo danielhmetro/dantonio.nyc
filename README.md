@@ -1,4 +1,4 @@
-# dantonio.tech
+# dantonio.nyc
 A Windows 95 experience written in HTML5. (forked and inspired by [Windows95-HTML](https://github.com/rn10950/Windows95-HTML))
 
 ## Why?
@@ -9,6 +9,9 @@ For a while I wanted to create a web-based shell for running real programs in th
 ### Programs
 Status: done ✅
 The Programs sub-menu is populated using custom Apache Indexes and outputing the directory index as JSON. This allows for every program to be easily added with its own "libraries" (html, css, js), or to use the proxy module to transparently serve some other server in the LAN.
+
+#### llm
+This is a simulated "Command Prompt/Terminal"-type application connecting through the [ttyd](https://github.com/tsl0922/ttyd) web terminal, which connects to a user that uses [ollama](https://github.com/ollama/ollama) running [deepseek-r1:8b](https://github.com/deepseek-ai/DeepSeek-R1). The chain-of-thought ~~overthinking~~reasoning is quite amusing but may get too stubborn to answer anything, which can be solved by closing and re-opening a window.
 
 #### minesweeper
 This is a fork of nickarocho's [Minesweeper](https://github.com/nickarocho/minesweeper), modified such that it fits within a window inside the "operating system". Honestly a way better rendition of minesweeper that I could ever do myself and is honestly what makes this website whole.
